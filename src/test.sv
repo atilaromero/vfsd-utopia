@@ -166,6 +166,12 @@ class MyCover_cbs extends Driver_cbs;
 
 endclass : MyCover_cbs
 
+class My_cell extends UNI_cell;
+  constraint myConstraint {
+    GFC[0] == 0;
+  }
+endclass: My_cell
+
 
   initial begin
     env = new(Rx, Tx, NumRx, NumTx, mif);
@@ -179,6 +185,10 @@ endclass : MyCover_cbs
 //     env.cfg.nCells = 100_000;
 //     $display("nCells = 100_000");
     env.build();
+    foreach(env.gen[i]) begin
+      automatic My_cell blueprint = new;
+      env.gen[i].blueprint = blueprint;
+    end
 
 //     begin             // Create error injection callback
 //       Driver_cbs_drop dcd = new();
