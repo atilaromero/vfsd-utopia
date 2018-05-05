@@ -451,3 +451,9 @@ Isso mostra o quanto os design patterns de blueprint e callbacks são úteis par
 concentrar a personalização de testes em um único local, o que favorece o
 reaproveitamento de código, pois evita que eventos particulares de teste poluam
 módulos como generator, driver e scoreboard.
+
+O relatório foi produzido convertendo o arquivo Readme.md para pdf:
+
+```
+pandoc Readme.md -s -o relatorio.pdf
+```
