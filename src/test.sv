@@ -140,17 +140,30 @@ class MyCover;
 endclass: MyCover
 
 class MyCover_cbs extends Driver_cbs;
-   MyCover cov;
+  MyCover cov;
+  Config cfg;
 
-   function new(MyCover cov);
-      this.cov = cov;
-   endfunction : new
+  function new(MyCover cov, ref Config cfg);
+    this.cov = cov;
+    this.cfg = cfg;
+  endfunction : new
 
-   // Send received cell to coverage
-   virtual task post_rx(input Driver drv,
-		        input UNI_cell c);
-   cov.sample(c.GFC);
-   endtask : post_rx
+
+  // virtual task pre_tx(input Driver drv,
+  //        input UNI_cell c,
+  //        inout bit drop);
+  // endtask : pre_tx
+
+  virtual task post_tx(input Driver drv,
+         input UNI_cell c);
+    cov.sample(c.GFC);
+    assert(c.GFC[0]==0) else
+    begin
+      $display("GFC[0] != 0 (No idea if that is bad or not...)");
+      cfg.nErrors++;
+    end
+  endtask : post_tx
+
 endclass : MyCover_cbs
 
 
@@ -173,9 +186,10 @@ endclass : MyCover_cbs
 //     end
 
     begin
-       MyCover cov = new;
-       MyCover_cbs cbs = new(cov);
-       foreach (env.drv[i]) env.drv[i].cbsq.push_back(cbs);  // Add cov to every monitor
+       automatic MyCover cov = new;
+       automatic MyCover_cbs cbs = new(cov, env.cfg);
+       automatic Driver drv[] = env.drv;
+       foreach (drv[i]) drv[i].cbsq.push_back(cbs);  // Add cov to every monitor
     end
 
     env.run();
