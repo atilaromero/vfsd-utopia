@@ -58,9 +58,9 @@ function void Scoreboard::save_expected(UNI_cell ucell);
    NNI_cell ncell = ucell.to_NNI;
    CellCfgType CellCfg = top.squat.lut.read(ncell.VPI);
 
-   $display("@%0t: Scb save: VPI=%0x, Forward=%b", $time, ncell.VPI, CellCfg.FWD);
+  //  $display("@%0t: Scb save: VPI=%0x, Forward=%b", $time, ncell.VPI, CellCfg.FWD);
 
-   ncell.display($sformatf("@%0t: Scb save: ", $time));
+  //  ncell.display($sformatf("@%0t: Scb save: ", $time));
 
    // Find all Tx ports where this cell will be forwarded
    for (int i=0; i<cfg.numTx; i++)
@@ -78,7 +78,7 @@ function void Scoreboard::check_actual(input NNI_cell c,
    NNI_cell match;
    int match_idx;
 
-   c.display($sformatf("@%0t: Scb check: ", $time));
+  //  c.display($sformatf("@%0t: Scb check: ", $time));
 
    if (expect_cells[portn].q.size() == 0) begin
       $display("@%0t: ERROR: %m cell not found because scoreboard for TX%0d empty", $time, portn);
@@ -92,7 +92,7 @@ function void Scoreboard::check_actual(input NNI_cell c,
 
    foreach (expect_cells[portn].q[i]) begin
       if (expect_cells[portn].q[i].compare(c)) begin
-	 $display("@%0t: Match found for cell", $time);
+	//  $display("@%0t: Match found for cell", $time);
 	 expect_cells[portn].q.delete(i);
 	 return;
       end

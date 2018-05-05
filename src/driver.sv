@@ -96,7 +96,7 @@ task Driver::run();
 	    if (drop) disable Tx; 	// Don't transmit this cell
 	 end
 
-	 c.display($sformatf("@%0t: Drv%0d: ", $time, PortID));
+	//  c.display($sformatf("@%0t: Drv%0d: ", $time, PortID));
 	 send(c);
 	 
 	 // Post-transmit callbacks
@@ -117,7 +117,7 @@ task Driver::send(input UNI_cell c);
    ATMCellType Pkt;
 
    c.pack(Pkt);
-   $write("Sending cell: "); foreach (Pkt.Mem[i]) $write("%x ", Pkt.Mem[i]); $display;
+  //  $write("Sending cell: "); foreach (Pkt.Mem[i]) $write("%x ", Pkt.Mem[i]); $display;
 
    // Iterate through bytes of cell, deasserting Start Of Cell indicater
    @(Rx.cbr);

@@ -48,7 +48,7 @@ class UNI_generator;
       repeat (nCells) begin
 	 assert(blueprint.randomize());
 	 $cast(c, blueprint.copy());
-	 c.display($sformatf("@%0t: Gen%0d: ", $time, PortID));
+	//  c.display($sformatf("@%0t: Gen%0d: ", $time, PortID));
 	 gen2drv.put(c);
 	 @drv2gen;		// Wait for driver to finish with it
       end
@@ -84,7 +84,7 @@ class NNI_generator;
       repeat (nCells) begin
 	 assert(blueprint.randomize());
 	 $cast(c, blueprint.copy());
-	 c.display($sformatf("Gen%0d: ", PortID));
+	//  c.display($sformatf("Gen%0d: ", PortID));
 	 gen2drv.put(c);
 	 @drv2gen;		// Wait for driver to finish with it
       end

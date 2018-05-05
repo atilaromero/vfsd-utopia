@@ -95,8 +95,8 @@ task Monitor::receive(output NNI_cell c);
 
    c = new();
    c.unpack(Pkt);
-   c.display($sformatf("@%0t: Mon%0d: ", $time, PortID));
-   
+  //  c.display($sformatf("@%0t: Mon%0d: ", $time, PortID));
+
 endtask : receive
 
 `endif // MONITOR__SV

@@ -46,7 +46,7 @@ class Coverage;
    // Sample input data
    function void sample(input bit [1:0] src,
 			input bit [NumTx-1:0] fwd);
-      $display("@%0t: Coverage: src=%d. FWD=%b", $time, src, fwd);
+      // $display("@%0t: Coverage: src=%d. FWD=%b", $time, src, fwd);
       this.src = src;
       this.fwd = fwd;
       CG_Forward.sample();

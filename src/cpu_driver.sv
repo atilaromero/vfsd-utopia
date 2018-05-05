@@ -85,7 +85,7 @@ task CPU_driver::run();
 `ifdef FWDALL
       CellFwd.FWD = '1
 `endif
-      $display("CellFwd.FWD[%0d]=%0d", i, CellFwd.FWD);
+      // $display("CellFwd.FWD[%0d]=%0d", i, CellFwd.FWD);
       CellFwd.VPI = i;
       HostWrite(i, CellFwd);
       lookup[i] = CellFwd;
