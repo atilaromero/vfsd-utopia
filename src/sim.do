@@ -22,7 +22,9 @@ vlog -work work -mfcu -sv top.sv \
   coverage.sv \
   cpu_driver.sv
 
-vsim work.top
+vsim work.top -sv_seed 20 +ntb_random_seed=20
 
-#do wave.do
-run 1000 ms
+onfinish stop
+run -all
+
+coverage report -verbose
