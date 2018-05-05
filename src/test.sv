@@ -111,6 +111,48 @@ program automatic test
 //    endfunction : new
 // endclass : Config_10_cells
 
+class MyCover;
+// copy of UNI_cell specs:
+// rand bit        [3:0]  GFC;
+// rand bit        [7:0]  VPI;
+// rand bit        [15:0] VCI;
+// rand bit               CLP;
+// rand bit        [2:0]  PT;
+//    bit        [7:0]  HEC;
+// rand bit [0:47] [7:0]  Payload;
+  bit [3:0] GFC;
+
+  covergroup GFC_cover;
+    coverpoint GFC;
+  endgroup: GFC_cover
+
+
+  function new;
+    GFC_cover = new;
+  endfunction : new
+
+   // Sample input data
+   function void sample(input bit [3:0] GFC);
+      this.GFC = GFC;
+      GFC_cover.sample();
+   endfunction : sample
+
+endclass: MyCover
+
+class MyCover_cbs extends Driver_cbs;
+   MyCover cov;
+
+   function new(MyCover cov);
+      this.cov = cov;
+   endfunction : new
+
+   // Send received cell to coverage
+   virtual task post_rx(input Driver drv,
+		        input UNI_cell c);
+   cov.sample(c.GFC);
+   endtask : post_rx
+endclass : MyCover_cbs
+
 
   initial begin
     env = new(Rx, Tx, NumRx, NumTx, mif);
@@ -130,9 +172,14 @@ program automatic test
 //       env.drv.cbs.push_back(dcd); // Put into driver's Q
 //     end
 
+    begin
+       MyCover cov = new;
+       MyCover_cbs cbs = new(cov);
+       foreach (env.drv[i]) env.drv[i].cbsq.push_back(cbs);  // Add cov to every monitor
+    end
+
     env.run();
     env.wrap_up();
   end
 
 endprogram // test
-
