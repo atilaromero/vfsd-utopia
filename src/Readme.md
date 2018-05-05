@@ -236,7 +236,7 @@ index 92cee8a..5a2dbb5 100755
 
 ### Resultado da simulação
 
-Esta foi a saída da simulação, ainda sem nenhuma adição de novos testes:
+Esta foi a saída da simulação, ainda sem nenhuma adição de novos testes (algumas linhas de debug do tipo *CellFwd* foram suprimidas):
 ```
 ModelSim> do sim.do
 # ** Warning: (vlib-34) Library already exists at "work".
@@ -293,255 +293,7 @@ ModelSim> do sim.do
 # Memory: Loading ... CellFwd.FWD[0]=2
 # CellFwd.FWD[1]=0
 # CellFwd.FWD[2]=13
-# CellFwd.FWD[3]=6
-# CellFwd.FWD[4]=9
-# CellFwd.FWD[5]=2
-# CellFwd.FWD[6]=3
-# CellFwd.FWD[7]=9
-# CellFwd.FWD[8]=13
-# CellFwd.FWD[9]=9
-# CellFwd.FWD[10]=5
-# CellFwd.FWD[11]=12
-# CellFwd.FWD[12]=7
-# CellFwd.FWD[13]=13
-# CellFwd.FWD[14]=8
-# CellFwd.FWD[15]=6
-# CellFwd.FWD[16]=15
-# CellFwd.FWD[17]=15
-# CellFwd.FWD[18]=12
-# CellFwd.FWD[19]=12
-# CellFwd.FWD[20]=13
-# CellFwd.FWD[21]=10
-# CellFwd.FWD[22]=15
-# CellFwd.FWD[23]=10
-# CellFwd.FWD[24]=8
-# CellFwd.FWD[25]=1
-# CellFwd.FWD[26]=13
-# CellFwd.FWD[27]=14
-# CellFwd.FWD[28]=5
-# CellFwd.FWD[29]=0
-# CellFwd.FWD[30]=4
-# CellFwd.FWD[31]=7
-# CellFwd.FWD[32]=2
-# CellFwd.FWD[33]=7
-# CellFwd.FWD[34]=11
-# CellFwd.FWD[35]=2
-# CellFwd.FWD[36]=10
-# CellFwd.FWD[37]=7
-# CellFwd.FWD[38]=14
-# CellFwd.FWD[39]=5
-# CellFwd.FWD[40]=6
-# CellFwd.FWD[41]=11
-# CellFwd.FWD[42]=13
-# CellFwd.FWD[43]=12
-# CellFwd.FWD[44]=13
-# CellFwd.FWD[45]=10
-# CellFwd.FWD[46]=7
-# CellFwd.FWD[47]=2
-# CellFwd.FWD[48]=9
-# CellFwd.FWD[49]=10
-# CellFwd.FWD[50]=9
-# CellFwd.FWD[51]=6
-# CellFwd.FWD[52]=8
-# CellFwd.FWD[53]=10
-# CellFwd.FWD[54]=4
-# CellFwd.FWD[55]=13
-# CellFwd.FWD[56]=6
-# CellFwd.FWD[57]=0
-# CellFwd.FWD[58]=14
-# CellFwd.FWD[59]=0
-# CellFwd.FWD[60]=14
-# CellFwd.FWD[61]=1
-# CellFwd.FWD[62]=11
-# CellFwd.FWD[63]=9
-# CellFwd.FWD[64]=0
-# CellFwd.FWD[65]=13
-# CellFwd.FWD[66]=8
-# CellFwd.FWD[67]=3
-# CellFwd.FWD[68]=6
-# CellFwd.FWD[69]=5
-# CellFwd.FWD[70]=5
-# CellFwd.FWD[71]=13
-# CellFwd.FWD[72]=12
-# CellFwd.FWD[73]=7
-# CellFwd.FWD[74]=10
-# CellFwd.FWD[75]=4
-# CellFwd.FWD[76]=15
-# CellFwd.FWD[77]=6
-# CellFwd.FWD[78]=10
-# CellFwd.FWD[79]=5
-# CellFwd.FWD[80]=3
-# CellFwd.FWD[81]=15
-# CellFwd.FWD[82]=2
-# CellFwd.FWD[83]=15
-# CellFwd.FWD[84]=1
-# CellFwd.FWD[85]=8
-# CellFwd.FWD[86]=3
-# CellFwd.FWD[87]=1
-# CellFwd.FWD[88]=6
-# CellFwd.FWD[89]=1
-# CellFwd.FWD[90]=9
-# CellFwd.FWD[91]=8
-# CellFwd.FWD[92]=14
-# CellFwd.FWD[93]=0
-# CellFwd.FWD[94]=8
-# CellFwd.FWD[95]=8
-# CellFwd.FWD[96]=11
-# CellFwd.FWD[97]=4
-# CellFwd.FWD[98]=12
-# CellFwd.FWD[99]=15
-# CellFwd.FWD[100]=1
-# CellFwd.FWD[101]=11
-# CellFwd.FWD[102]=14
-# CellFwd.FWD[103]=6
-# CellFwd.FWD[104]=13
-# CellFwd.FWD[105]=4
-# CellFwd.FWD[106]=6
-# CellFwd.FWD[107]=9
-# CellFwd.FWD[108]=0
-# CellFwd.FWD[109]=2
-# CellFwd.FWD[110]=9
-# CellFwd.FWD[111]=8
-# CellFwd.FWD[112]=1
-# CellFwd.FWD[113]=11
-# CellFwd.FWD[114]=2
-# CellFwd.FWD[115]=2
-# CellFwd.FWD[116]=12
-# CellFwd.FWD[117]=12
-# CellFwd.FWD[118]=13
-# CellFwd.FWD[119]=11
-# CellFwd.FWD[120]=3
-# CellFwd.FWD[121]=8
-# CellFwd.FWD[122]=15
-# CellFwd.FWD[123]=14
-# CellFwd.FWD[124]=4
-# CellFwd.FWD[125]=1
-# CellFwd.FWD[126]=10
-# CellFwd.FWD[127]=15
-# CellFwd.FWD[128]=11
-# CellFwd.FWD[129]=15
-# CellFwd.FWD[130]=9
-# CellFwd.FWD[131]=10
-# CellFwd.FWD[132]=5
-# CellFwd.FWD[133]=9
-# CellFwd.FWD[134]=0
-# CellFwd.FWD[135]=14
-# CellFwd.FWD[136]=7
-# CellFwd.FWD[137]=8
-# CellFwd.FWD[138]=13
-# CellFwd.FWD[139]=7
-# CellFwd.FWD[140]=14
-# CellFwd.FWD[141]=2
-# CellFwd.FWD[142]=12
-# CellFwd.FWD[143]=15
-# CellFwd.FWD[144]=5
-# CellFwd.FWD[145]=10
-# CellFwd.FWD[146]=14
-# CellFwd.FWD[147]=3
-# CellFwd.FWD[148]=14
-# CellFwd.FWD[149]=0
-# CellFwd.FWD[150]=13
-# CellFwd.FWD[151]=10
-# CellFwd.FWD[152]=10
-# CellFwd.FWD[153]=9
-# CellFwd.FWD[154]=4
-# CellFwd.FWD[155]=6
-# CellFwd.FWD[156]=12
-# CellFwd.FWD[157]=14
-# CellFwd.FWD[158]=9
-# CellFwd.FWD[159]=3
-# CellFwd.FWD[160]=8
-# CellFwd.FWD[161]=12
-# CellFwd.FWD[162]=11
-# CellFwd.FWD[163]=13
-# CellFwd.FWD[164]=4
-# CellFwd.FWD[165]=8
-# CellFwd.FWD[166]=8
-# CellFwd.FWD[167]=10
-# CellFwd.FWD[168]=14
-# CellFwd.FWD[169]=10
-# CellFwd.FWD[170]=14
-# CellFwd.FWD[171]=3
-# CellFwd.FWD[172]=0
-# CellFwd.FWD[173]=2
-# CellFwd.FWD[174]=9
-# CellFwd.FWD[175]=6
-# CellFwd.FWD[176]=12
-# CellFwd.FWD[177]=8
-# CellFwd.FWD[178]=5
-# CellFwd.FWD[179]=2
-# CellFwd.FWD[180]=14
-# CellFwd.FWD[181]=15
-# CellFwd.FWD[182]=1
-# CellFwd.FWD[183]=8
-# CellFwd.FWD[184]=4
-# CellFwd.FWD[185]=13
-# CellFwd.FWD[186]=1
-# CellFwd.FWD[187]=13
-# CellFwd.FWD[188]=9
-# CellFwd.FWD[189]=12
-# CellFwd.FWD[190]=2
-# CellFwd.FWD[191]=13
-# CellFwd.FWD[192]=13
-# CellFwd.FWD[193]=8
-# CellFwd.FWD[194]=1
-# CellFwd.FWD[195]=12
-# CellFwd.FWD[196]=6
-# CellFwd.FWD[197]=14
-# CellFwd.FWD[198]=2
-# CellFwd.FWD[199]=4
-# CellFwd.FWD[200]=3
-# CellFwd.FWD[201]=11
-# CellFwd.FWD[202]=13
-# CellFwd.FWD[203]=4
-# CellFwd.FWD[204]=5
-# CellFwd.FWD[205]=10
-# CellFwd.FWD[206]=15
-# CellFwd.FWD[207]=9
-# CellFwd.FWD[208]=14
-# CellFwd.FWD[209]=15
-# CellFwd.FWD[210]=8
-# CellFwd.FWD[211]=8
-# CellFwd.FWD[212]=12
-# CellFwd.FWD[213]=6
-# CellFwd.FWD[214]=10
-# CellFwd.FWD[215]=10
-# CellFwd.FWD[216]=7
-# CellFwd.FWD[217]=5
-# CellFwd.FWD[218]=6
-# CellFwd.FWD[219]=10
-# CellFwd.FWD[220]=12
-# CellFwd.FWD[221]=5
-# CellFwd.FWD[222]=12
-# CellFwd.FWD[223]=3
-# CellFwd.FWD[224]=15
-# CellFwd.FWD[225]=13
-# CellFwd.FWD[226]=7
-# CellFwd.FWD[227]=11
-# CellFwd.FWD[228]=10
-# CellFwd.FWD[229]=14
-# CellFwd.FWD[230]=7
-# CellFwd.FWD[231]=14
-# CellFwd.FWD[232]=0
-# CellFwd.FWD[233]=13
-# CellFwd.FWD[234]=13
-# CellFwd.FWD[235]=6
-# CellFwd.FWD[236]=10
-# CellFwd.FWD[237]=4
-# CellFwd.FWD[238]=4
-# CellFwd.FWD[239]=12
-# CellFwd.FWD[240]=11
-# CellFwd.FWD[241]=8
-# CellFwd.FWD[242]=5
-# CellFwd.FWD[243]=11
-# CellFwd.FWD[244]=5
-# CellFwd.FWD[245]=14
-# CellFwd.FWD[246]=5
-# CellFwd.FWD[247]=4
-# CellFwd.FWD[248]=12
-# CellFwd.FWD[249]=14
-# CellFwd.FWD[250]=8
-# CellFwd.FWD[251]=12
+...
 # CellFwd.FWD[252]=14
 # CellFwd.FWD[253]=11
 # CellFwd.FWD[254]=10
@@ -577,3 +329,125 @@ ModelSim> do sim.do
 # @36245: End of simulation, 0 errors, 0 warnings
 # @36245: top.t1.Scoreboard.wrap_up 2 expected cells, 2 actual cells received
 ```
+
+## Tarefas
+
+### Coverage
+
+Para aumentar coverage, foi incluida no modulo test.sv duas classes, MyCover e MyCover_cbs.
+A classe MyCover contém as o coveragegroup e a classe MyCover_cbs é o gancho para que o driver chame o callback.
+
+A seguir as classes e a inclusão do gancho no driver no módulo principal do test.sv:
+```
+class MyCover;
+  bit [3:0] GFC;
+
+  covergroup GFC_cover;
+    coverpoint GFC;
+  endgroup: GFC_cover
+
+
+  function new;
+    GFC_cover = new;
+  endfunction : new
+
+   // Sample input data
+   function void sample(input bit [3:0] GFC);
+      this.GFC = GFC;
+      GFC_cover.sample();
+   endfunction : sample
+
+endclass: MyCover
+
+class MyCover_cbs extends Driver_cbs;
+  MyCover cov;
+  Config cfg;
+
+  function new(MyCover cov, ref Config cfg);
+    this.cov = cov;
+    this.cfg = cfg;
+  endfunction : new
+
+  virtual task post_tx(input Driver drv,
+         input UNI_cell c);
+    cov.sample(c.GFC);
+  endtask : post_tx
+
+endclass : MyCover_cbs
+
+initial begin
+  env = new(Rx, Tx, NumRx, NumTx, mif);
+
+  env.gen_cfg();
+  env.build();
+
+  begin
+     automatic MyCover cov = new;
+     automatic MyCover_cbs cbs = new(cov, env.cfg);
+     automatic Driver drv[] = env.drv;
+     foreach (drv[i]) drv[i].cbsq.push_back(cbs);  // Add cov to every monitor
+  end
+
+  env.run();
+  env.wrap_up();
+end
+```
+
+Para visualizar o relatório de coverage é preciso rodar:
+```
+vsim -c
+> do sim.do
+> coverage report -verbose
+```
+
+## Assertion
+
+A assertion incluída foi colocada no próprio post_tx, porque o callback já estava pronto.
+Outra opção seria criar um callback só para a assertion.
+
+Sem a constraint que será descrita mais a frente, ou se ela for modificada,
+este assertion irá aumentar o nErrors counter.
+
+```
+virtual task post_tx(input Driver drv,
+       input UNI_cell c);
+  cov.sample(c.GFC);
+  assert(c.GFC[0]==0) else
+  begin
+    $display("GFC[0] != 0 (No idea if that is bad or not...)");
+    cfg.nErrors++;
+  end
+endtask : post_tx
+
+```
+
+## Constraint
+
+Para incluir a constraint, foi criada a classe My_cell extends UNI_cell, para
+ser usada como blueprint nos generators.
+
+```
+class My_cell extends UNI_cell;
+  constraint myConstraint {
+    GFC[0] == 0;
+  }
+endclass: My_cell
+
+foreach(env.gen[i]) begin
+  automatic My_cell blueprint = new;
+  env.gen[i].blueprint = blueprint;
+end
+
+```
+
+# Finalização
+
+Além das alterações descritas, foram suprimidas mensagens de debug, que dificultavam
+a visualização das mensagens do início da simulação.
+
+As três modificações de teste (coverage, assertion e constraint) puderam ser
+incluídas diretamente no test.sv, sem necessidade de alteração de outros módulos.
+Isso mostra o quanto os design patterns de blueprint e callbacks são úteis para
+concentrar a personalização de testes em um único local, o que favorece o
+reaproveitamento de código, pois evita que eventos particulares de teste poluam
+módulos como generator, driver e scoreboard.
