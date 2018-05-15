@@ -23,7 +23,6 @@
 
 `include "atm_cell.sv"
 `include "cpu_ifc.sv"
-`include "config.sv"
 //`include "CPUMethod.sv"
 
 class CPU_driver;
@@ -31,7 +30,6 @@ class CPU_driver;
    CellCfgType lookup [255:0]; // copy of look-up table
    Config cfg;
    bit [NumTx-1:0] fwd;
-   bit clk;
 
    extern function new(vCPU_T mif, Config cfg);
    extern task Initialize_Host ();
@@ -80,9 +78,7 @@ task CPU_driver::run();
    Initialize_Host();
 
    // Configure through Host interface
-   repeat (10) 
-
-   #100;
+   repeat (10) @(negedge clk);
    $write("Memory: Loading ... ");
    for (int i=0; i<=255; i++) begin
       CellFwd.FWD = $urandom();

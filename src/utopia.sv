@@ -71,8 +71,7 @@ interface Utopia;
 
   logic [IfWidth-1:0] data;
   bit clk_in, clk_out;
-  bit soc, en, clav, valid, ready, reset;
-  wire selected;
+  bit soc, en, clav, valid, ready, reset, selected;
 
   ATMCellType ATMcell;  // union of structures for ATM cells
 
@@ -107,3 +106,6 @@ interface Utopia;
 
 endinterface
 
+typedef virtual Utopia vUtopia;
+typedef virtual Utopia.TB_Rx vUtopiaRx;
+typedef virtual Utopia.TB_Tx vUtopiaTx;

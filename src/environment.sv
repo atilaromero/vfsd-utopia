@@ -21,6 +21,7 @@
 `ifndef ENVIRONMENT__SV
 `define ENVIRONMENT__SV
 
+
 `include "generator.sv"
 `include "driver.sv"
 `include "monitor.sv"
@@ -29,6 +30,7 @@
 `include "coverage.sv"
 `include "cpu_ifc.sv"
 `include "cpu_driver.sv"
+
 
 /////////////////////////////////////////////////////////
 // Call scoreboard from Driver using callbacks

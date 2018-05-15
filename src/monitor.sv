@@ -23,7 +23,6 @@
 
 `include "atm_cell.sv"
 
-typedef virtual Utopia.TB_Tx vUtopiaTx;
 
 typedef class Monitor;
 /////////////////////////////////////////////////////////////////////////////

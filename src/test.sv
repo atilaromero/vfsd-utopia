@@ -70,9 +70,6 @@
 
 `include "definitions.sv"  // include external definitions
 
-`include "environment.sv"
-  Environment env;
-
 program automatic test
   #(parameter int NumRx = 4, parameter int NumTx = 4)
    (Utopia.TB_Rx Rx[0:NumRx-1],
@@ -95,6 +92,9 @@ program automatic test
     `endif
     $display("");
   end
+
+`include "environment.sv"
+  Environment env;
 
 // class Driver_cbs_drop extends Driver_cbs;
 //  virtual task pre_tx(input ATM_cell cell, ref bit drop);

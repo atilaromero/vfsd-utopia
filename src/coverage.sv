@@ -20,7 +20,6 @@
 `ifndef COVERAGE__SV
 `define COVERAGE__SV
 
-`include "definitions.sv"
 
 class Coverage;
 

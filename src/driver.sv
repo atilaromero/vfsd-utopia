@@ -22,7 +22,6 @@
 
 `include "atm_cell.sv"
 
-typedef virtual Utopia.TB_Rx vUtopiaRx;
 
 typedef class Driver;
 /////////////////////////////////////////////////////////////////////////////

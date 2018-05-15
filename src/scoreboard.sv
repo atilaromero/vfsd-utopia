@@ -20,7 +20,6 @@
 `ifndef SCOREBOARD__SV
  `define SCOREBOARD__SV
 
-`include "config.sv"
 `include "atm_cell.sv"
 
 class Expect_cells;
